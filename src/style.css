@@ -1,0 +1,13 @@
+.phone {
+ width:250px;
+ margin: auto;
+ display:flex;
+ flex-wrap: wrap;
+}
+.phone input, .phone button {
+  width:100%;
+  outline: none;
+}
+.phone button {
+ border:0;
+}
