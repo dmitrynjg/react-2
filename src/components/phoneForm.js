@@ -51,7 +51,7 @@ class Phoneform extends React.Component {
         <input
           type='tel'
           placeholder='Введите номер'
-          onKeyDown={(event) => (event.target.value = this.inputMask(event.currentTarget.value))}
+          onKeyDown={(event) =>(event.target.value = this.inputMask(event.currentTarget.value)) }
           onFocus={(event) => (event.target.value = this.inputMask(event.currentTarget.value))}
         />
         {this.state.showCodeInput && <input placeholder='Введите код' />}
