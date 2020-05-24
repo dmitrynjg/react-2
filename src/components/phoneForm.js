@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 
 
 class Phoneform extends React.Component {
@@ -51,7 +51,7 @@ class Phoneform extends React.Component {
         <input
           type='tel'
           placeholder='Введите номер'
-          onKeyDown={(event) =>(event.target.value = this.inputMask(event.currentTarget.value)) }
+          onKeyDown={(event) => {  if(event.key !== 'Backspace') event.target.value = this.inputMask(event.currentTarget.value); } }
           onFocus={(event) => (event.target.value = this.inputMask(event.currentTarget.value))}
         />
         {this.state.showCodeInput && <input placeholder='Введите код' />}
@@ -66,5 +66,4 @@ class Phoneform extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('#phone');
-ReactDOM.render(<Phoneform />, domContainer);
+export {Phoneform};
